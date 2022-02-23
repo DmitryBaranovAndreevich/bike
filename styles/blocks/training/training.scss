@@ -1,0 +1,128 @@
+.training {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 60px 1fr 28px;
+  grid-template-areas: "title   img"
+                       "content img"
+                       "links   img";
+  box-sizing: border-box;
+  width: 100%;
+  gap: 10px;
+  padding: $mainPadding $mainPadding $mainPadding 0;
+
+  &__title {
+    grid-area: title;
+    margin: 0;
+    @include font-source-sans(55px,#151515,700,60px);
+    letter-spacing: -.5px;
+  }
+
+  &__content {
+    grid-area: content;
+    max-width: 460px;
+    flex-grow: 1;
+    margin: 40px 0 0 0;
+    @include font-source-sans(18px,#222222,400,28px);
+  }
+
+  &__foto {
+    align-self: flex-end;
+    grid-area: img;
+    display: block;
+    max-width: 580px;
+    max-height: 460px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__links {
+    grid-area: links;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item-link {
+    padding: 0;
+    list-style: none;
+    padding-right: 30px;
+    transition: .3s;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  &__link {
+    margin: 0;
+    text-decoration: none;
+    @include font-source-sans(18px,#151515,600,28px);
+  }
+
+  @include desctop {
+    padding: 60px 60px 60px 0;
+
+    &__title {
+      font-size: 34px;
+      line-height: 44px;
+    }
+
+    &__links {
+      margin-top: 20px;
+    }
+
+    &__content {
+      margin-top: 20px;
+    }
+  }
+
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-right: 0;
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__content {
+      max-width: 100%;
+      order: 3;
+    }
+
+    &__links {
+      order: 4;
+    }
+
+    &__foto {
+      max-width: 100%;
+      margin-top: 27px;
+    }
+  }
+
+  @include phones {
+
+    &__content {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 30px;
+      opacity: .7;
+    }
+
+    &__links {
+      margin-top: 30px;
+    }
+
+    &__link {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

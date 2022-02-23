@@ -1,0 +1,84 @@
+.proverb {
+  box-sizing: border-box;
+  padding: $mainPadding $mainPadding $mainPadding 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    display: block;
+    margin-right: 10px;
+    max-width: 650px;
+    width: 60%;
+    max-height: 460px;
+    height: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 470px;
+  }
+
+  &__content {
+    margin: 0;
+    @include font-source-sans(34px,#151515,600,44px);
+    letter-spacing: -.5px;
+  }
+
+  &__name {
+    margin: 0;
+    @include font-source-sans(20px,#151515,500,32px);
+  }
+
+  &__annotation {
+    margin: 6px 0 0 0;
+    @include font-source-sans(16px,#222222,400,30px);
+    opacity: .7;
+  }
+
+  @include laptop {
+    padding: 60px 60px 60px 0;
+
+    &__content {
+      margin-bottom: 40px;
+      font-size: 23px;
+      line-height: 29px;
+    }
+
+    &__annotation {
+      margin-top: 0;
+    }
+  }
+
+  @include tablets {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #E3E3E3;
+
+    &__image {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__container {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+   @include phones {
+
+    &__name {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &__annotation {
+      font-size: 10px;
+      line-height: 16px;
+    }
+   }
+}

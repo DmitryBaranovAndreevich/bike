@@ -1,0 +1,81 @@
+.button {
+  align-self: flex-end;
+  display: flex;
+  flex-grow: 0;
+  gap: 24px;
+  margin-bottom: 7px;
+  align-items: center;
+
+  &__swith {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #24B47E;
+    }
+
+    &_theme_dark {
+      background-color: #545454;
+
+      &::before {
+        left: 22px;
+      }
+    }
+  }
+
+  &__icon-light {
+    width: 28px;
+    height: 28px;
+    background: url("../images/button-swith/icon-light.png") no-repeat center/cover;
+
+    &_theme_dark {
+      background-image: url("../images/button-swith/icon-light_theme_dark.png");
+    }
+  }
+
+  &__icon-dark {
+    width: 19px;
+    height: 19px;
+    background: url("../images/button-swith/icon-dark.png") no-repeat center/cover;
+
+    &_theme_dark {
+      background-image: url("../images/button-swith/icon-dark_theme_dark.png");
+    }
+  }
+
+  &__icon-dark-light {
+    width: 31px;
+    height: 31px;
+    background: url("../images/icon-dark-light.png") no-repeat center/cover;
+    border: none;
+    display: none;
+  }
+
+  @include phones {
+    display: none;
+
+    &__icon-dark-light {
+      display: block;
+      align-self: flex-end;
+    }
+  }
+
+  &_position_popup {
+    display: flex;
+    margin: auto auto 0;
+  }
+}
