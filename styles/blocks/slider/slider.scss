@@ -98,8 +98,9 @@
 
   @include phones-small {
     padding-right: 0;
+
     &__icon {
-       bottom: 140px;
+       bottom: 150px;
     }
   }
 }

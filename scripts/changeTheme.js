@@ -1,6 +1,8 @@
 const allParagraph = document.getElementsByTagName('p');
 const allLinks = document.getElementsByTagName('a');
-const allTitle = document.getElementsByTagName('h3');
+const allTitleh3 = document.getElementsByTagName('h3');
+const allTitleh2 = document.getElementsByTagName('h2');
+const titleh1 = document.getElementsByTagName('h1');
 const content = document.querySelector('.content');
 const header = document.querySelector('.header');
 const headerButton = header.querySelector('.header__button');
@@ -14,10 +16,10 @@ const buttonChangeThemeBig = button.querySelector('.button__swith');
 const lightIcon = button.querySelector('.button__icon-light');
 const darkIcon = button.querySelector('.button__icon-dark');
 const bicyclesNav = bycicles.querySelector('#bicycles-select');
-const buttonChangeThemeSmall = document.querySelector('.button__icon-dark-light');
+const buttonChangeThemeSmall = document.querySelector('.button-settings');
 
 
-const arr = [content, header, footer,footerLabel];
+const arr = [content, header];
 
 buttonChangeThemeBig.addEventListener('click', function() {
   chageTheme();
@@ -49,7 +51,15 @@ function chageTheme() {
     toggleClass(element);
   });
 
-  Array.from(allTitle).forEach((element) => {
+  Array.from(allTitleh3).forEach((element) => {
+    toggleClass(element);
+  });
+
+  Array.from(allTitleh2).forEach((element) => {
+    toggleClass(element);
+  });
+
+  Array.from(titleh1).forEach((element) => {
     toggleClass(element);
   });
 
@@ -62,5 +72,6 @@ function chageTheme() {
   footerAutor.classList.toggle('footer__autor_theme_dark');
   footer.classList.toggle('footer_theme_dark');
   footerButton.classList.toggle('footer__button_theme_dark');
+  buttonChangeThemeSmall.classList.toggle('button-settings_theme_dark');
 }
 

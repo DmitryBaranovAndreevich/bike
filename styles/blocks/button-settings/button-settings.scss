@@ -1,0 +1,17 @@
+.button-settings {
+  width: 31px;
+  height: 31px;
+  background: url("../images/button-light-dark.svg") no-repeat center/cover;
+  border: none;
+  display: none;
+
+  &_theme_dark {
+    background-image: url("../images/button-light-dark_theme_dark.svg");
+  }
+
+  @include phones {
+    display: block;
+    align-self: flex-end;
+  }
+}
+

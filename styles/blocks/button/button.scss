@@ -57,25 +57,12 @@
     }
   }
 
-  &__icon-dark-light {
-    width: 31px;
-    height: 31px;
-    background: url("../images/icon-dark-light.png") no-repeat center/cover;
-    border: none;
-    display: none;
-  }
-
   @include phones {
     display: none;
 
-    &__icon-dark-light {
-      display: block;
-      align-self: flex-end;
+    &_position_popup {
+      display: flex;
+      margin: auto auto 0;
     }
-  }
-
-  &_position_popup {
-    display: flex;
-    margin: auto auto 0;
   }
 }
