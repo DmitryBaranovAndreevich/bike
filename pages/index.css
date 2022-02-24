@@ -480,10 +480,10 @@ template {
     width: 100%;
     max-height: 260px;
     display: block;
-    border-top: 20px solid #ffffff;
-    border-bottom: 20px solid #ffffff;
-    border-right: 50px solid #ffffff;
-    border-left: 50px solid #ffffff;
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
     border-radius: 20px;
     height: auto;
     box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.2); }
@@ -552,11 +552,12 @@ template {
     .roads__image-container {
       height: 158px;
       width: 234px;
-      background-color: #ffffff;
+      background-color: #F4F4F4;
       border-radius: 20px;
       margin-bottom: 37px;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.2); }
     .roads__bikes {
       position: static;
       width: 180px;
@@ -671,10 +672,10 @@ template {
     width: 100%;
     max-height: 260px;
     display: block;
-    border-top: 20px solid #ffffff;
-    border-bottom: 20px solid #ffffff;
-    border-right: 50px solid #ffffff;
-    border-left: 50px solid #ffffff;
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
     border-radius: 20px;
     height: auto;
     box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.2); }
@@ -743,11 +744,12 @@ template {
     .roads__image-container {
       height: 158px;
       width: 234px;
-      background-color: #ffffff;
+      background-color: #F4F4F4;
       border-radius: 20px;
       margin-bottom: 37px;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      box-shadow: -20px 60px 220px 0 rgba(0, 0, 0, 0.2); }
     .roads__bikes {
       position: static;
       width: 180px;
@@ -1006,9 +1008,9 @@ template {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border: 20px solid white;
+    border: 20px solid #F4F4F4;
     border-radius: 20px;
-    background-color: white;
+    background-color: #F4F4F4;
     box-shadow: 0px 60px 140px 0 rgba(0, 0, 0, 0.06); }
   .bicycles__foto-name {
     margin: 18px 0 0 5px;
@@ -1084,8 +1086,7 @@ template {
       border-bottom: 1px solid #E3E3E3; }
       .bicycles__foto-container {
         box-sizing: border-box;
-        background-color: #ffffff;
-        border-radius: 20px;
+        background-color: #F4F4F4;
         padding-bottom: 16px; }
       .bicycles__foto-name {
         font-size: 14px;
@@ -1098,14 +1099,17 @@ template {
         align-self: flex-start;
         margin-top: 35px; }
       .bicycles__content {
-        margin-top: 23px;
-        gap: 10px; }
+        gap: 10px;
+        margin-top: 0; }
       .bicycles__slider {
-        overflow: hidden; }
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 60px 140px 0 rgba(0, 0, 0, 0.06);
+        margin-top: 23px; }
       .bicycles__foto {
         box-sizing: border-box;
         max-width: 780px;
-        border: 12px solid white;
+        border: 12px solid #F4F4F4;
         box-shadow: none; }
       .bicycles__button-next, .bicycles__button-prev {
         display: block; } }

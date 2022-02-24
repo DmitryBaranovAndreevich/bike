@@ -106,10 +106,10 @@
     width: 100%;
     max-height: 260px;
     display: block;
-    border-top: 20px solid #ffffff;
-    border-bottom: 20px solid #ffffff;
-    border-right: 50px solid #ffffff;
-    border-left: 50px solid #ffffff;
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
     border-radius: 20px;
     height: auto;
     box-shadow: -20px 60px 220px 0 rgba(#000000, .2);
@@ -207,11 +207,12 @@
     &__image-container {
       height: 158px;
       width: 234px;
-      background-color: #ffffff;
+      background-color: #F4F4F4;
       border-radius: 20px;
       margin-bottom: 37px;
       align-items: center;
       justify-content: center;
+      box-shadow: -20px 60px 220px 0 rgba(#000000, .2);
     }
 
     &__bikes {
