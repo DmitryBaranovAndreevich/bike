@@ -1086,7 +1086,6 @@ template {
       border-bottom: 1px solid #E3E3E3; }
       .bicycles__foto-container {
         box-sizing: border-box;
-        background-color: #F4F4F4;
         padding-bottom: 16px; }
       .bicycles__foto-name {
         font-size: 14px;
@@ -1103,16 +1102,20 @@ template {
         margin-top: 0; }
       .bicycles__slider {
         overflow: hidden;
-        border-radius: 20px;
-        box-shadow: 0px 60px 140px 0 rgba(0, 0, 0, 0.06);
         margin-top: 23px; }
       .bicycles__foto {
         box-sizing: border-box;
         max-width: 780px;
         border: 12px solid #F4F4F4;
-        box-shadow: none; }
-      .bicycles__button-next, .bicycles__button-prev {
-        display: block; } }
+        box-shadow: 0px 60px 140px 0 rgba(0, 0, 0, 0.06); } }
+  @media screen and (max-width: 647px) {
+    .bicycles__slider {
+      border-radius: 20px;
+      box-shadow: 0px 60px 140px 0 rgba(0, 0, 0, 0.06); }
+    .bicycles__foto {
+      box-shadow: none; }
+    .bicycles__button-next, .bicycles__button-prev {
+      display: block; } }
   @media screen and (max-width: 480px) {
     .bicycles {
       padding-right: 0; }
@@ -1353,11 +1356,8 @@ template {
       .footer__input_theme_dark::placeholder {
         color: #ffffff;
         opacity: .5; }
-    .footer__input:valid + .footer__button {
-      display: block; }
-    .footer__input:invalid + .footer__button {
-      display: none; }
   .footer__button {
+    display: none;
     position: absolute;
     border: none;
     bottom: 15px;
@@ -1401,15 +1401,14 @@ template {
   flex-direction: column;
   box-sizing: border-box;
   width: 100vw;
-  max-width: 320px;
-  max-height: 640px;
   height: 100vh;
   position: fixed;
   top: -100%;
   opacity: 0;
   background-color: #F4F4F4;
   padding: 19px 15px 38px;
-  transition: opacity .3s; }
+  transition: opacity .3s;
+  z-index: 4; }
   .popup__close-button {
     background: url("../images/close-button.svg") no-repeat center/cover;
     width: 24px;

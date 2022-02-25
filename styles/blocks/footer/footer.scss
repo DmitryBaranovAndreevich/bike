@@ -66,17 +66,10 @@
         opacity: .5;
       }
     }
-
-    &:valid + .footer__button{
-      display: block;
-    }
-
-    &:invalid + .footer__button {
-      display: none;
-    }
   }
 
   &__button {
+    display: none;
     position: absolute;
     border: none;
     bottom: 15px;

@@ -193,8 +193,9 @@
   <footer class="footer">
     <form name="email" class="footer__form">
       <label for="email" class="footer__label">Подпишитесь на рассылку —</label>
-      <input type="email" class="footer__input" id="email" placeholder="Ваш e-mail">
-      <button type="button" class="footer__button">ok</button>
+      <input type="email" class="footer__input" id="email" placeholder="Ваш e-mail" pattern="^.+@[a-z]+\.[a-z]{2,6}$"
+        title="Не верный формат ввода">
+      <button type="submit" class="footer__button">ok</button>
     </form>
     <div class="footer__container">
       <p class="footer__autor">&copy;Road Club 2021</p>
@@ -224,7 +225,7 @@
   <script src="./scripts/select.js"></script>
   <script src="./scripts/changeTheme.js"></script>
   <script src="./scripts/popup.js"></script>
-  <script src="./scripts/checkInput.js"></script>
+  <script src="./scripts/submit.js"></script>
 </body>
 
 </html>
