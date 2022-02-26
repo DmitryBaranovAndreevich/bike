@@ -1,0 +1,233 @@
+.roads {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: minmax(300px,460px) minmax(150px,250px) minmax(300px,610px);
+  grid-template-rows: 230px 1fr;
+  grid-template-areas: "title        . block"
+                        "description . block";
+
+  &__description {
+    grid-area: description;
+    padding-right: 20px;
+  }
+
+  &__title {
+    grid-area: title;
+    max-width: 70%;
+    margin: 65px 0 0 0;
+    @include font-source-sans(55px,black,700,60px);
+    letter-spacing: -.5px;
+  }
+
+  &__content {
+    max-width: 460px;
+    margin: 0;
+    @include font-source-sans(18px,#222222,400,28px);
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    max-width: 180px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    @include font-source-sans(14px,#FFFFFF,600,18px);
+    margin: 50px 0 0 0;
+    border-radius: 4px;
+    padding: 15px 10px;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(to right, #319E75 0%,#319E75 50%,#24B47E 50%,#24B47E 100%);
+      transition: left .7s;
+    }
+
+    &:hover::before {
+      left: 0;
+    }
+  }
+
+  &__annotation {
+    @include font-source-sans(18px,#151515,400,18px);
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: 167px;
+    align-items: center;
+  }
+
+  &__line {
+    max-width: 132px;
+    margin-left: 30px;
+    width: 100%;
+    height: 2px;
+    background-color:#D7D4D4;
+  }
+
+  &__image {
+    grid-area: block;
+    box-sizing: border-box;
+    background: url("../images/roads-background.jpg") no-repeat center/cover;
+    display: flex;
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    @include responsive-ratio(610,836,&__image);
+  }
+
+  &__image-container {
+    display: flex;
+    position: relative;
+    right: 200px;
+    margin-top: 54%;
+    width: 100%;
+    max-height: 430px;
+    background-color: white;
+    background-color: transparent;
+
+  }
+
+  &__bikes {
+    position: sticky;
+    top:200px;
+    max-width: 340px;
+    width: 100%;
+    max-height: 260px;
+    display: block;
+    border-top: 20px solid #F4F4F4;
+    border-bottom: 20px solid #F4F4F4;
+    border-right: 50px solid #F4F4F4;
+    border-left: 50px solid #F4F4F4;
+    border-radius: 20px;
+    height: auto;
+    box-shadow: -20px 60px 220px 0 rgba(#000000, .2);
+   }
+
+  @include desctop {
+
+    &__title {
+      width: 100%;
+      font-size: 32px;
+      line-height: 40px;
+      margin-top: 35px;
+    }
+
+    &__bikes {
+      max-width: 200px;
+      max-height: 160px;
+    }
+
+    &__image-container {
+      right: 130px;
+      margin-top: 60%;
+    }
+   }
+
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E3E3E3;
+    padding-bottom: 80px;
+
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      order: 3;
+    }
+
+    &__container {
+      display: none;
+    }
+
+    &__image {
+      @include responsive-ratio(254,348,&__image);
+      max-height: 600px;
+      margin-top: 43px;
+    }
+
+    &__image-container {
+      margin-top: 30%;
+      right: 30px;
+      max-height: 330px;
+    }
+
+    &__button {
+      margin-top: 0;
+      align-self: center;
+    }
+  }
+
+  @include tablets {
+
+    &__description {
+      flex-direction: column;
+      padding-right: 0;
+    }
+
+    &__button {
+      align-self: flex-start;
+      margin-top: 39px;
+      max-width: 284px;
+    }
+  }
+
+  @include phones {
+
+    &__content {
+      font-size: 12px;
+      line-height: 18px;
+      opacity: .7;
+    }
+
+    &__title {
+      max-width: 60%;
+      margin-top: 0;
+    }
+
+    &__image {
+      max-width: 254px;
+      width: 100%;
+      align-self: flex-end;
+      flex-direction: row;
+    }
+
+    &__image-container {
+      height: 158px;
+      width: 234px;
+      background-color: #F4F4F4;
+      border-radius: 20px;
+      margin-bottom: 37px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -20px 60px 220px 0 rgba(#000000, .2);
+    }
+
+    &__bikes {
+      position: static;
+      width: 180px;
+      height: 138px;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    &__image-container {
+      margin-top: 60%;
+    }
+  }
+}
+
+

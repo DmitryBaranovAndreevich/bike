@@ -1,0 +1,32 @@
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    margin: 0;
+    transition: $mainTransition;
+
+    @include font-source-sans(14px,black,500,18px);
+  }
+
+  &__link:hover {
+    opacity: $headerOpacity;
+  }
+
+  &__link + &__link {
+    margin-left: 34px;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+  &_position_popup {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 0;
+    gap:32px;
+  }
+}

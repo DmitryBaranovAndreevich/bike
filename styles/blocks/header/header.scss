@@ -1,0 +1,40 @@
+.header {
+  max-width: $max-width;
+  @include center;
+  background-color: $mainColorLight;
+  box-sizing: border-box;
+  padding: 28px $mainPadding;
+
+  &__button {
+    width: 22px;
+    height: 22px;
+    background: url("../images/header-icon.svg") no-repeat center/cover;
+    border: none;
+    display: none;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &_theme_dark {
+      background-image: url("../images/header-icon_theme_dark.svg") ;
+    }
+  }
+  @include laptop {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  @include phones {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 24px;
+    padding-bottom: 46px;
+
+    &__button {
+      display: block;
+    }
+  }
+}

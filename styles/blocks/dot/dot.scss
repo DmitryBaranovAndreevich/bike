@@ -1,0 +1,15 @@
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: #CACACA;
+  border-radius: 50%;
+
+  &_active {
+    background-color: #151515;
+  }
+}
+
+.dot + .dot {
+  margin-left: 5px;
+}
+

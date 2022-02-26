@@ -1,0 +1,120 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin:  0 auto;
+  padding: 80px $mainPadding 60px;
+  background-color: #EFEFEF;
+
+  &_theme_dark {
+    background-color: #2F2F2F;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 360px;
+    position: relative;
+  }
+
+  &__label {
+    max-width: 229px;
+    display: block;
+    @include font-source-sans(24px,#151515,600,32px);
+
+    &_theme_dark {
+      background-color: #2F2F2F;
+      color: #ffffff;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    max-width: 360px;
+    width: 100%;
+    padding: 11px 20px;
+    margin-top: 50px;
+    @include font-source-sans(13px,#151515,500,28px);
+    border: 1px solid rgba(199,199,199,.7);
+    border-radius: 4px;
+    background-color: transparent;
+
+    &::placeholder {
+      @include font-source-sans(13px,#151515,500,28px);
+      opacity: .7;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+
+    &_theme_dark {
+      color: #ffffff;
+      opacity: .5;
+
+      &::placeholder {
+        color: #ffffff;
+        opacity: .5;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+    position: absolute;
+    border: none;
+    bottom: 15px;
+    right: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &_theme_dark {
+      color: #ffffff;
+      opacity: .5;
+    }
+  }
+
+  &__autor {
+    margin:  100px 0 0 0;
+    @include font-source-sans(14px,#CFCFCF,600,20px);
+
+    &_theme_dark {
+      color: #565656;
+      background-color: #2F2F2F;
+    }
+  }
+
+  @include laptop {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include tablets {
+    padding-top: 60px;
+    padding-right: 18px;
+
+    &__input {
+      margin-top: 40px;
+    }
+  }
+
+  @include phones {
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 25px;
+  }
+}

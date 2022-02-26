@@ -1,0 +1,238 @@
+.bicycles {
+  padding: 0 $mainPadding 90px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    @include font-source-sans(55px,#151515,700,60px);
+    letter-spacing: -.5px;
+  }
+
+  &__menu {
+    display: flex;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  &__menu-item {
+    padding: 0;
+    margin: 0 40px 0 0;
+    list-style: none;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    @include font-source-sans(18px,#222222,400,28px);
+    opacity: .7;
+
+    &_active {
+      color: #151515;
+      opacity: 1;
+      font-weight: 600;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: none;
+    margin-top: 120px;
+    gap: 10px;
+    justify-content: space-between;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__foto-container {
+    margin: 0;
+    text-decoration: none;
+  }
+
+
+  &__foto {
+    box-sizing: border-box;
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 20px solid #F4F4F4;
+    border-radius: 20px;
+    background-color: #F4F4F4;
+    box-shadow: 0px 60px 140px 0 rgba(#000000,.06);
+  }
+
+  &__foto-name {
+      margin: 18px 0 0 5px;
+     @include font-source-sans(18px,#151515,600,22px);
+  }
+
+  &__menu-list{
+    box-sizing: border-box;
+    appearance: none;
+    background: url("../images/select-icon.svg") no-repeat 90% 55%;
+    max-width: 114px;
+    padding: 8px 8px;
+    align-self: center;
+    max-height: 30px;
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    display: none;
+    @include font-source-sans(11px,#151515,600,14px);
+
+    &_theme_dark {
+      color: #ffffff;
+      background-color: #545454;
+      background-image: url("../images/select-icon_theme_dark.svg");
+    }
+  }
+
+  &__dot-container {
+    display: none;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__button-next,&__button-prev {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 100px;
+    top: 35%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &::before {
+      content: '';
+      width: 40px;
+      height: 100px;
+      display: block;
+      margin: auto;
+      background: url("../images/buttom-icon.svg") no-repeat center/contain;
+    }
+  }
+
+  &__button-next:hover,&__button-prev:hover {
+    opacity: .4;
+  }
+
+  &__button-prev{
+    right: 10px;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include laptop {
+    padding-right: 60px;
+
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__menu-list {
+      display: flex;
+      width: 100%;
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-right: 20px;
+    border-bottom: 1px solid #E3E3E3;
+
+    &__foto-container {
+      box-sizing: border-box;
+      padding-bottom: 16px;
+    }
+
+    &__foto-name {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0;
+      text-align: center;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__menu-list {
+      align-self: flex-start;
+      margin-top: 35px;
+    }
+
+    &__content {
+      gap:10px;
+      margin-top: 0;
+    }
+
+    &__slider {
+      overflow: hidden;
+      margin-top: 23px;
+      border-radius: 20px;
+      box-shadow: 0px 60px 140px 0 rgba(#000000,.03);
+    }
+
+    &__foto {
+      box-sizing: border-box;
+      max-width: 780px;
+      border: 12px solid #F4F4F4;
+      box-shadow: 0px 60px 140px 0 rgba(#000000,.06);
+    }
+  }
+
+  @media screen and(max-width: 647px){
+
+    &__slider {
+      border-radius: 20px;
+      box-shadow: 0px 60px 140px 0 rgba(#000000,.06);
+    }
+
+    &__foto {
+      box-shadow: none;
+    }
+
+    &__button-next,&__button-prev {
+      display: block;
+    }
+
+    &__dot-container {
+      max-width: 25px;
+      display: flex;
+       margin: 18px auto 0;
+    }
+  }
+
+  @include phones {
+    padding-right: 0;
+
+    &__foto {
+      max-height: 270px;
+    }
+  }
+}
+

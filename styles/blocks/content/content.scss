@@ -1,0 +1,21 @@
+.content {
+  box-sizing: border-box;
+  background-color: $mainColorLight;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-left: $mainPadding;
+
+  &_theme_dark {
+    background-color: #333333;
+    color: white;
+  }
+
+  @include laptop {
+    padding-left: 60px;
+  }
+
+  @include phones {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
